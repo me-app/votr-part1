@@ -1,9 +1,10 @@
 {
-  "name": "NAME-YOUR-APP",
+  "name": "VOTRPART1",
   "version": "0.0.3",
-  "private": true,
+  "private": false,
+  "main": "app.js",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "app.js"
   },
   "dependencies": {
     "mocha": "*",
@@ -15,7 +16,7 @@
     "cradle": "0.6.7",
     "twilio": "1.6.0"
   },
-  "subdomain": "PICK-A-SUBDOMAIN",
+  "subdomain": "MIE",
   "engines": {
     "node": "0.10.x"
   }
