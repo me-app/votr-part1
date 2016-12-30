@@ -11,7 +11,8 @@ var express = require('express')
 var app = express();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.OPENSHIFT_NODEJS_PORT  || 3000);
+  app.set('server_ip_address', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
   app.set('views', __dirname + '/views');
   app.set('view engine', 'hjs');
   app.use(express.favicon());
@@ -30,6 +31,6 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.post('/vote/sms', routes.voteSMS);
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), app.get('server_ip_address'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
