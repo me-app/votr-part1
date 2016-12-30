@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "private": true,
   "scripts": {
-    "start": "node_modules\\.bin\\supervisor app.js"
+    "start": "app.js"
   },
   "dependencies": {
     "mocha": "*",
